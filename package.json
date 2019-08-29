@@ -1,0 +1,11 @@
+{
+  "name": "planck.js-playground",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Oliver Zell",
+  "license": "ISC",
+  "dependencies": {
+    "monaco-editor": "^0.17.1",
+    "planck-js": "^0.3.10"
+  }
+}

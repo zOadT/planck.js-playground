@@ -1,0 +1,110 @@
+body {
+	display: grid;
+
+	grid-template-rows: 50px 1fr;
+	grid-template-columns: 180px 1fr 1fr;
+	grid-template-areas:
+		"n v t"
+		"n v e";
+
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+}
+.horizontal {
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: 180px 50px 1fr;
+	grid-template-areas: 
+		"n v v"
+		"n t e";
+}
+nav {
+	grid-area: n;
+
+	font-family: sans-serif;//TODO;
+	color: white;
+	background: black;
+	line-height: 25px;
+}
+iframe {
+	grid-area: v;
+
+	width: 100%;
+	height: 100%;
+
+	background: #222222;
+	border: none;
+}
+#editor {
+	grid-area: e;
+
+	background: #1e1e1e;
+	// important for resizing;
+	overflow: hidden;
+}
+#errorContainer {
+	pointer-events: none;
+	grid-area: v;
+	z-index: 1;
+
+	margin-left: 25px;
+	margin-right: 25px;
+}
+#errorContainer div {
+	pointer-events:auto;
+	margin-top: 5px;
+	padding: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	color: white;
+	background: maroon;
+	border-radius: 2px;
+	box-shadow: 2px 2px 3px black;
+
+	font-family: Consolas,Lucida Console,Menlo,Monaco,monospace;
+}
+
+@keyframes rotate {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(90deg);}
+}
+h3 {
+	cursor: pointer;
+	margin-top: 15px;
+	margin-bottom: 2px;
+}
+h3:before {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 18px;//TODO this value;
+	content: "\203A";
+}
+.open:before {
+	transform: rotate(90deg);
+	animation-name: rotate;
+	animation-duration: 0.4s;
+}
+ul {
+	display: none;
+	list-style-type: none;
+	padding-left: 20px;
+	margin: 0px;
+}
+.open+ul {
+	display: block;
+}
+nav ul a {
+	color: #EEEEEE;
+	text-decoration: none;
+}
+
+#toolbar {
+	grid-area: t;
+	background: black;
+}
+svg {
+	cursor: pointer;
+}

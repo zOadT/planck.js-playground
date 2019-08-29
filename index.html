@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link rel="stylesheet" data-name="vs/editor/editor.main" href="./node_modules/monaco-editor/min/vs/editor/editor.main.css">
+	<link rel="stylesheet" href="style.css"></style>
+	<title>Planck.js Playground</title>
+</head>
+<body>
+	<nav id="sidebar">
+		<h3>Basics</h3>
+		<ul>
+		</ul>
+
+		<h3>Joints</h3>
+		<ul>
+			<li><a href="#DistanceJoint.js">Distance Joint</a></li>
+			<li><a href="#RevoluteJoint.js">Revolute Joint</a></li>
+			<li><a href="#PrismaticJoint.js">Prismatic Joint</a></li>
+			<li><a href="#PulleyJoint.js">Pulley Joint</a></li>
+			<li><a href="#GearJoint.js">Gear Joint</a></li>
+			<li><a href="#MouseJoint.js">Mouse Joint</a></li>
+			<li><a href="#WheelJoint.js">Wheel Joint</a></li>
+			<li><a href="#WeldJoint.js">Weld Joint</a></li>
+			<li><a href="#RopeJoint.js">Rope Joint</a></li>
+			<li><a href="#FrictionJoint.js">Friction Joint</a></li>
+			<li><a href="#MotorJoint.js">Motor Joint</a></li>
+		</ul>
+
+		<h3>Collision</h3>
+		<ul>
+		</ul>
+
+		<h3>Miscellaneous</h3>
+		<ul>
+		</ul>
+	</nav>
+
+	<div id="toolbar">
+		<button onclick="editor.getAction('runCode').run();">Run Code</button>
+	<!--		<svg width="50" height="50" onclick="editor.getAction('runCode').run();">
+				<title>Run Code</title>
+				<rect x="0" y="0" width="50" height="50" fill="green" />
+				<polygon points="15,10 40,25 15,40" fill="white" />
+			</svg>-->
+		<button onclick="editor.getAction('toggleLayout').run()">Toggle Layout</button>
+		<button onclick="editor.getAction('editor.action.toggleHighContrast').run();">Toggle High Contrast Mode</button>
+	</div>
+	<div id="editor"></div>
+
+	<!-- overflow hidden, otherwise you get scrollbars when resizing the window -->
+	<iframe id="view" srcdoc="<style>body{overflow: hidden}</style><script src='./node_modules/planck-js/dist/planck-with-testbed.min.js'></script>" seamless></iframe>
+	<div id="errorContainer"></div>
+
+
+	<script>var require = { paths: { 'vs': './node_modules/monaco-editor/min/vs' } };</script>
+	<script src="./node_modules/monaco-editor/min/vs/loader.js"></script>
+	<script src="./node_modules/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
+	<script src="./node_modules/monaco-editor/min/vs/editor/editor.main.js"></script>
+
+	<script src="index.js"></script>
+
+</body>
+</html>
