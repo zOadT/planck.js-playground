@@ -20,6 +20,8 @@ body {
 }
 nav {
 	grid-area: n;
+	overflow-x: hidden;
+	overflow-y: auto;
 
 	font-family: sans-serif;//TODO;
 	color: white;
