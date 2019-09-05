@@ -89,6 +89,10 @@ var editor = monaco.editor.create(editorContainer, {
 editor.addAction({
 	id: "runCode",
 	label: "Run Code",
+	keybindings: [
+		monaco.KeyCode.F5,
+		monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_B,
+	],
 	run(editor) {
 		view.reset();
 		view.addCode(editor.getValue());
