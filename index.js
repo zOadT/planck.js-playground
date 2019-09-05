@@ -196,7 +196,7 @@ nav.onclick = e => {
 		e.target.classList.toggle("open");
 	} else if(e.target.tagName == "A") {
 		let url = e.target.href;
-		if(url == document.URL) {
+		if(url == document.URL | !url) {
 			return false;
 		}
 		let src = url2src(url);

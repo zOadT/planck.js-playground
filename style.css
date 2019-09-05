@@ -102,8 +102,11 @@ ul {
 	display: block;
 }
 nav ul a {
-	color: #EEEEEE;
+	color: #444444;
 	text-decoration: none;
+}
+nav ul a[href] {
+	color: #EEEEEE;
 }
 #github {
 	margin-top: 15px;
