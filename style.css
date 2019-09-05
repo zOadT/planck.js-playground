@@ -14,14 +14,17 @@ body {
 .horizontal {
 	grid-template-rows: repeat(2, 1fr);
 	grid-template-columns: 180px 50px 1fr;
-	grid-template-areas: 
+	grid-template-areas:
 		"n v v"
 		"n t e";
 }
-nav {
+#sidebar {
 	grid-area: n;
 	overflow-x: hidden;
 	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
 	font-family: sans-serif;//TODO;
 	color: white;
@@ -101,6 +104,10 @@ ul {
 nav ul a {
 	color: #EEEEEE;
 	text-decoration: none;
+}
+#github {
+	margin-top: 15px;
+	text-align: center;
 }
 
 #toolbar {

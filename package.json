@@ -4,6 +4,10 @@
   "description": "",
   "author": "Oliver Zell",
   "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/zOadT/planck.js-playground.git"
+  },
   "dependencies": {
     "monaco-editor": "^0.17.1",
     "planck-js": "^0.3.10"

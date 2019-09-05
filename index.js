@@ -15,7 +15,7 @@ function makeTitle(name) {
 	return `Planck.js Playground - ${name}`;
 }
 
-let sidebar = document.getElementById("sidebar");
+let nav = document.getElementsByTagName('NAV')[0];
 let typingPaths = [
 	'./node_modules/planck-js/lib/index.d.ts',
 	'./node_modules/planck-js/lib/collision/index.d.ts',
@@ -32,12 +32,12 @@ function initialLoad() {
 	let value, link, url;
 	let src = url2src(document.URL);
 	if(!src) {
-		link = sidebar.getElementsByTagName('A')[0];
+		link = nav.getElementsByTagName('A')[0];
 		url = link.href;
 		src = url2src(url);
 	} else {
 		url = document.URL;
-		let links = sidebar.getElementsByTagName('A');
+		let links = nav.getElementsByTagName('A');
 		for(let l of links) {
 			if(l.href.toLowerCase() === url.toLowerCase()) {
 				link = l;
@@ -187,8 +187,8 @@ function handleCodeLoaded(src, code) {
 	editor.updateOptions({readOnly: false});
 }
 
-sidebar.onclick = e => {
-	if(e.target.parentElement == sidebar) {
+nav.onclick = e => {
+	if(e.target.parentElement == nav) {
 		e.target.classList.toggle("open");
 	} else if(e.target.tagName == "A") {
 		let url = e.target.href;
