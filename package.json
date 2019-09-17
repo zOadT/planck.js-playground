@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A collection of code snippets to showcase the API and features of planck.js.",
   "author": "Oliver Zell",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type" : "git",
     "url" : "https://github.com/zOadT/planck.js-playground.git"
