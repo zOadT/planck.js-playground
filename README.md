@@ -1,5 +1,7 @@
 # Planck.js Playground
 
+A collection of code snippets to showcase the API and features of [planck.js](https://github.com/shakiba/planck.js).
+
 ## Running
 1. Clone or download this repository
 1. Install npm dependencies:

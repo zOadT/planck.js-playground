@@ -1,7 +1,7 @@
 {
   "name": "planck.js-playground",
   "version": "0.0.1",
-  "description": "",
+  "description": "A collection of code snippets to showcase the API and features of planck.js.",
   "author": "Oliver Zell",
   "license": "ISC",
   "repository": {
